@@ -1,37 +1,207 @@
-.page {
+/* ===== RESETEO Y CONFIGURACIÓN BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
   background-color: black;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ===== ESTRUCTURA PRINCIPAL ===== */
+.page {
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  padding: 30px 0;
+  text-align: center;
 }
 
 .header__logo {
-  align-items: center;
-  width: 254.84px;
-  height: 68.94px;
-  margin: 34px auto auto 513px;
+  max-width: 254.84px;
+  height: auto;
 }
 
-/* __title */
+/* ===== SECCIÓN LEAD (HERO) ===== */
+.lead {
+  text-align: center;
+  padding: 20px 0 40px;
+}
 
-position: absolute;
-width: 720px;
-height: 200px;
-left: 280px;
-top: 194px;
+.lead__title {
+  font-weight: 900;
+  font-size: 96px; /* 96px */
+  line-height: 1.04;
+  margin: 0 auto 20px;
+  max-width: 720px;
+}
 
-font-family: "Inter";
-font-style: normal;
-font-weight: 900;
-font-size: 96px;
-line-height: 100px;
-/* o 104% */
-text-align: center;
+.lead__subtitle {
+  font-weight: 400;
+  font-size: 30px; /* 24px */
+  line-height: 1.2;
+  margin: 0 auto 30px;
+  max-width: 720px;
+}
 
-color: #ffffff;
+.lead__image {
+  width: 100%;
+  max-width: 984px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
 
+/* ===== SECCIÓN INTRO - ALINEADA A LA IZQUIERDA ===== */
+.intro {
+  max-width: 830px;
+  margin: 0 auto 60px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.intro__title {
+  font-weight: 900;
+  font-size: 54px; /* 40px */
+  line-height: 1.07;
+  margin-bottom: 24px;
+}
+
+.intro__quote {
+  font-weight: 400;
+  font-size: 24px; /* 20px */
+  line-height: 1.4;
+  font-style: italic;
+  margin: 0 0 16px 0;
+}
+
+.intro__author {
+  font-weight: 400;
+  font-size: 24; /* 20px */
+  line-height: 1.2;
+  margin: 0 0 24px 0;
+  text-align: right;
+}
+
+.intro__description {
+  font-weight: 400;
+  font-size: 16px; /* 20px */
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 20px 0 30px;
+}
+
+.footer__copyright {
+  font-size: 14px; /* 14px */
+  color: #ccc;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablet y pantallas pequeñas (hasta 768px) */
+@media screen and (max-width: 768px) {
+  .lead__title {
+    font-size: 75px; /* 44px */
+  }
+
+  .lead__subtitle {
+    font-size: 30px; /* 20px */
+  }
+
+  .intro__title {
+    font-size: 45px; /* 32px */
+  }
+
+  .intro__quote,
+  .intro__author {
+    font-size: 24px;
+  }
+
+  .intro__description {
+    font-size: 16px; /* 18px */
+  }
+
+  .lead__image {
+    max-width: 768px;
+  }
+
+  .intro {
+    padding: 0 15px;
+  }
+}
+
+/* Móvil pequeño (hasta 320px) */
+@media screen and (max-width: 320px) {
+  .page {
+    padding: 0 12px;
+  }
+
+  .lead__title {
+    font-size: 40px; /* 32px */
+  }
+
+  .lead__subtitle {
+    font-size: 16px; /* 16px */
+  }
+
+  .intro__title {
+    font-size: 32px; /* 28px */
+  }
+
+  .intro__quote,
+  .intro__author {
+    font-size: 24px;
+  }
+
+  .intro__description {
+    font-size: 16px; /* 16px */
+  }
+
+  .header {
+    padding: 20px 0;
+  }
+
+  .header__logo {
+    max-width: 188px;
+  }
+
+  .lead__image {
+    max-width: 100%;
+  }
+
+  .intro {
+    padding: 0 10px;
+  }
+}
+
+/* ===== FUENTES ===== */
 @font-face {
   font-family: "Inter";
   src: url("../fonts/inter-4.1/woff-hinted/Inter-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -39,15 +209,13 @@ color: #ffffff;
   src: url("../fonts/inter-4.1/woff-hinted/Inter-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
-body {
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: 400;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 700;
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-4.1/woff-hinted/Inter-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
