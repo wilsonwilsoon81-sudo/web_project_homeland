@@ -1,0 +1,110 @@
+.intro {
+  max-width: 984px;
+  margin: 0 auto 60px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.intro__title {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 1.074;
+  letter-spacing: 0%;
+  margin-bottom: 0 0 24px;
+  max-width: 830px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.intro__quote {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.416;
+  letter-spacing: 0%;
+  font-style: italic;
+  margin: 0 0 16px;
+  max-width: 830px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.intro__author {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.416;
+  letter-spacing: 0%;
+  margin: 0 0 24px;
+  text-align: right;
+  max-width: 830px;
+}
+
+.intro__description {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.63;
+  margin: 0;
+  max-width: 830px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    max-width: 720px;
+    padding: 0 15px;
+  }
+
+  .intro__title {
+    font-size: 45px;
+    line-height: 1.88;
+    margin-bottom: 20px;
+  }
+
+  .intro__quote,
+  .intro__author {
+    font-size: 24px;
+    line-height: 1.416;
+    max-width: 720px;
+  }
+
+  .intro__description {
+    font-size: 16px;
+    line-height: 1.63;
+    max-width: 720px;
+  }
+
+  @media screen and (max-width: 320px) {
+    .intro {
+      max-width: 288px;
+      padding: 0 10px;
+    }
+
+    .intro__title {
+      font-size: 32px;
+      line-height: 1.09;
+      margin-bottom: 20px;
+    }
+
+    .intro__quote {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .intro__author {
+      font-size: 24px;
+      line-height: 1.416;
+      text-align: right;
+      margin-bottom: 24px;
+    }
+
+    .intro__description {
+      font-size: 16px;
+      line-height: 1.63;
+    }
+  }
+}
